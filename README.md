@@ -1,5 +1,5 @@
-## インストール
-### Docker
+## 環境構築
+### Dockerインストール
 ```
 $ sudo apt-get update
 $ sudo apt-get install ca-certificates curl
@@ -15,4 +15,8 @@ $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 $ sudo usermod -aG docker $USER
+```
+### Docker上でGUIのROS
+```
+docker run -p 6080:80 --security-opt seccomp=unconfined --shm-size=512m ghcr.io/tiryoh/ros2-desktop-vnc:jazzy
 ```
