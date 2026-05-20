@@ -1,4 +1,5 @@
 ## 環境構築
+- WSL上でUbuntu起動
 ### Dockerインストール
 ```
 $ sudo apt-get update
