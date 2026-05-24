@@ -17,7 +17,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugi
 
 $ sudo usermod -aG docker $USER
 ```
-### Docker上でGUIのROS
+### 簡易的にDocker上でGUIのROS
 - https://github.com/Tiryoh/docker-ros2-desktop-vnc
 ```
 docker run -p 6080:80 --security-opt seccomp=unconfined --shm-size=512m ghcr.io/tiryoh/ros2-desktop-vnc:jazzy
@@ -38,3 +38,20 @@ docker run -p 6080:80 --security-opt seccomp=unconfined --shm-size=512m ghcr.io/
 - トピック通信とサービス通信の組み合わせ
 - アクションクライアントとアクションサーバーの通信
 - フィードバック
+
+## 動作確認
+### パブリッシャ
+- ターミナル1
+```
+ros2 run demo_nodes_py talker  
+```
+### サブスクライバー
+- ターミナル2
+```
+ros2 run demo_nodes_py listener     
+```
+### グラフ
+- ターミナル3
+```
+ros2 run rqt_graph rqt_graph
+```
