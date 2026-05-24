@@ -22,3 +22,18 @@ $ sudo usermod -aG docker $USER
 ```
 docker run -p 6080:80 --security-opt seccomp=unconfined --shm-size=512m ghcr.io/tiryoh/ros2-desktop-vnc:jazzy
 ```
+
+## 通信方式
+- ノード
+### トピック通信
+- 一方向通信
+- Publisherからトピックを介してSubscriberに送信
+
+### サービス通信
+- 双方向通信
+- クライアントとサーバーの間での通信
+
+### アクション通信
+- トピック通信とサービス通信の組み合わせ
+- アクションクライアントとアクションサーバーの通信
+- フィードバック
