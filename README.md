@@ -22,6 +22,7 @@ $ sudo usermod -aG docker $USER
 ```
 docker run -p 6080:80 --security-opt seccomp=unconfined --shm-size=512m ghcr.io/tiryoh/ros2-desktop-vnc:jazzy
 ```
+- http://127.0.0.1:6080
 
 ## 通信方式
 - ノード
