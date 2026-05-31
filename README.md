@@ -1,5 +1,6 @@
 ## 環境構築
 - WSL上でUbuntu起動
+- https://note.com/tanoshi_lab/n/n6b28d21fce2f
 ### Dockerインストール
 ```
 $ sudo apt-get update
