@@ -55,3 +55,23 @@ ros2 run demo_nodes_py listener
 ```
 ros2 run rqt_graph rqt_graph
 ```
+
+## ノード確認
+```
+ros2 node list
+```
+
+## シミュレーター
+### Turtlesim
+- 使用できるコマンド
+```
+ros2 pkg executables turtlesim
+```
+- シミュレーター起動
+```
+ros2 run turtlesim turtlesim_node
+```
+- キー入力によるリモート操作起動
+```
+ros2 run turtlesim turtle_teleop_key
+```
