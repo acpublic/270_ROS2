@@ -1,5 +1,4 @@
 ## 環境構築
-- WSL上でUbuntu起動
 - https://note.com/tanoshi_lab/n/n6b28d21fce2f
 - https://zenn.dev/sakai13/books/7639959094542f
 - https://independence-sys.net/main/?p=7444
