@@ -2,6 +2,61 @@
 - WSL上でUbuntu起動
 - https://note.com/tanoshi_lab/n/n6b28d21fce2f
 - https://zenn.dev/sakai13/books/7639959094542f
+- https://independence-sys.net/main/?p=7444
+### 直接インストール
+```
+locale
+```
+- UTF-8でない場合
+```
+$ sudo apt install locales
+$ sudo locale-gen en_US en_US.UTF-8
+$ sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+$ export LANG=en_US.UTF-8
+```
+- Universeリポジトリ有効化
+```
+$ sudo apt install software-properties-common
+$ sudo add-apt-repository universe
+```
+
+- ROS2 GPGキー登録
+```
+$ sudo apt install curl -y
+$ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key \
+-o /usr/share/keyrings/ros-archive-keyring.gpg
+```
+- ROS2リポジトリ追加
+```
+$ echo "deb [arch=$(dpkg --print-architecture) \
+$ signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] \
+$ http://packages.ros.org/ros2/ubuntu noble main" | \
+$ sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+```
+- 確認
+```
+$ cat /etc/apt/sources.list.d/ros2.list
+deb [arch=amd64 signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu noble main
+```
+- 更新
+```
+sudo apt update
+```
+- フル（GUI含む）インストール
+```
+sudo apt install ros-jazzy-desktop -y
+```
+- 環境変数設定
+```
+$ echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
+$ source ~/.bashrc
+$ echo $ROS_DISTRO
+jazzy
+```
+- 診断
+```
+ros2 doctor
+```
 ### Dockerインストール
 ```
 $ sudo apt-get update
