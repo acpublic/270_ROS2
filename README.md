@@ -153,5 +153,15 @@ sudo apt install python3-colcon-common-extensions
 ```
 cd ~/ros2_ws
 colcon build
+```
+### 通信
+```
 source install/setup.bash
+```
+```
+ros2 run my_first_pkg publisher
+```
+- 別ターミナル
+```
+ros2 run my_first_pkg subscriber
 ```
