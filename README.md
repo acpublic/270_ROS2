@@ -133,3 +133,14 @@ ros2 run turtlesim turtlesim_node
 ```
 ros2 run turtlesim turtle_teleop_key
 ```
+
+## ファイル作成
+### ワークスペースを作る
+```
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
+```
+### パッケージを作る
+```
+ros2 pkg create --build-type ament_python my_first_pkg
+```
