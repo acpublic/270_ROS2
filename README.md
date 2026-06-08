@@ -144,3 +144,14 @@ cd ~/ros2_ws
 ```
 ros2 pkg create --build-type ament_python my_first_pkg
 ```
+
+### Command 'colcon' not found
+```
+sudo apt install python3-colcon-common-extensions
+```
+### ビルド
+```
+cd ~/ros2_ws
+colcon build
+source install/setup.bash
+```
