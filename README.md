@@ -144,6 +144,15 @@ cd ~/ros2_ws
 ```
 ros2 pkg create --build-type ament_python my_first_pkg
 ```
+- エントリーポイントをsetup.pyに追加
+```
+entry_points={
+    'console_scripts': [
+        'publisher = my_first_pkg.publisher:main',
+        'subscriber = my_first_pkg.subscriber:main',
+    ],
+},
+```
 
 ### Command 'colcon' not found
 ```
